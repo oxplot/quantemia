@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root {
+  --main-width: 650px;
+  --aside-width: 320px;
+  --base-font-size: 14px;
+  --box-gap: 40px;
+  --body-vert-margin: 50px;
+  --background-color: #fff;
+  --primary-color: #000;
+  --accent-color: #ff5555;
+  --subtle-color: #999999;
+}
+* { box-sizing: border-box; }
+.isasxas {
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline var(--accent-color);
+}
+a:before {
+  content: "» ";
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: calc(var(--base-font-size) * 2) 0 var(--base-font-size);
+  font-weight: normal;
+  line-height: 1.5em;
+}
+h1 { font-size: 220%; }
+h2 { font-size: 128%; }
+h3 { font-size: 114%; font-weight: bold; }
+p { margin: var(--base-font-size) 0; }
+html {
+  font-family: "Libre Baskerville";
+  font-size: var(--base-font-size);
+  line-height: 1.6em;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+body {
+  width: calc(var(--main-width) + var(--aside-width) + var(--box-gap));
+  margin: var(--body-vert-margin) auto;
+  display: flex;
+}
+main > :first-child, aside > :first-child { margin-top: 0; }
+main > :last-child, aside > :last-child { margin-bottom: 0; }
+body > main {
+  width: var(--main-width);
+}
+body > aside {
+  margin-left: var(--box-gap);
+  width: var(--aside-width);
+}
+figure {
+  margin: var(--base-font-size) 0;
+}
+figcaption {
+  margin: var(--base-font-size) 0;
+}
+figure > img {
+  width: 100%;
+  border-radius: 10px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+  border-top: 1px solid var(--subtle-color);
+  border-bottom: 1px solid var(--subtle-color);
+  border-left: 0;
+  border-right: 0;
+}
+table td {
+  vertical-align: top;
+  border-top: 1px solid var(--subtle-color);
+}
+table td:first-child {
+  border-right: 1px solid var(--subtle-color);
+  padding-right: var(--base-font-size);
+}
+table td:last-child {
+  padding-left: var(--base-font-size);
+  text-align: right;
+}
+fieldset, footer, header { padding: 0; border: 0; margin: 0; }
+.unit-select {
+  text-align: right;
+  margin-top: var(--base-font-size);
+}
+.unit-select > input {
+  display: none;
+}
+.unit-select > label {
+  border-radius: 5px;
+  padding: 0 calc(var(--base-font-size) / 2);
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+.unit-select > label:hover {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+}
+.unit-select > input:checked + label {
+  border-color: var(--primary-color);
+}
+ul.p {
+  margin: var(--base-font-size) 0;
+  padding: 0;
+  list-style: none;
+}
+ul.p > li {
+  padding: 0;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+<h1>Dying from COVID-19 <span class="isasxas">is as unlikely as</span>
+getting eaten by a shark while swimming on Bondi beach in Australia*</h1>
+<figure>
+<img src="covid-vs-shark.png">
+<figcaption>
+left: lung damage from COVID-19 (<a href="#">wikipedia</a>)<br>
+right: great white shark (<a href="#">wikipedia</a>)
+</figcaption>
+</figure>
+</main>
+
+<aside>
+<p>
+<em>We consider two odds to be similar if they are within %5 of one
+another.<br>
+<a href="#">Learn more about our approach</a>
+</em>
+</p>
+<h3>Odds</h2>
+<table>
+<tbody>
+<tr>
+  <td><a href="#">Dying from COVID-19</a></td>
+  <td>1:129412</td>
+</tr>
+<tr>
+  <td><a href="#">Getting eaten by a shark swimming on Bondi beach in Australia</a></td>
+  <td>1:129412</td>
+</tr>
+</tbody>
+</table>
+<fieldset class="unit-select">
+  <input id="percent" type="radio" name="unit"><label title="percent" for="percent">%</label>
+  <input id="ratio" type="radio" name="unit" checked><label title="ratio" for="ratio">:</label>
+  <input id="fraction" type="radio" name="unit"><label title="fraction" for="fraction">/</label>
+</fieldset>
+<h3 style="color: var(--accent-color)">Just as unlikely</h3>
+<ul class="p">
+<li><a href="#">Injury in a passenger airplane accident</a>
+<li><a href="#">Food poisoning eating red meat</a>
+<li><a href="#">Some more blah that I can't back with</a>
+</ul>
+<h3>Related</h3>
+<ul class="p">
+<li><a href="#">Injury in a passenger airplane accident</a>
+<li><a href="#">Food poisoning eating red meat</a>
+<li><a href="#">Some more blah that I can't back with</a>
+</ul>
+<h3>Explore</h3>
+<ul class="p">
+<li><a href="#">Current Events</a>
+<li><a href="#">Diseases</a>
+<li><a href="#">Probabilities</a>
+</ul>
+<footer>
+</footer>
+</aside>
+</body>
+</html>
